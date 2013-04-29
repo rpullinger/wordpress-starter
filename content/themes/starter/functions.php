@@ -17,7 +17,7 @@ add_action( 'init', 'register_header_menu' );
 /*
 Register a dynamic sidebar
  */
-function register_sidebar() {
+function register_main_sidebar() {
 	register_sidebar(array(
 	    'before_widget' => '<div class="l-sidebar-widget"><div class="sidebar-widget">',
 	    'after_widget' => '</div></div>',
@@ -25,7 +25,7 @@ function register_sidebar() {
 	    'after_title' => '</h2>',
 	));
 }
-add_action( 'init', 'register_sidebar' );
+add_action( 'init', 'register_main_sidebar' );
 
 
 /*
