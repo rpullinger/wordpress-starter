@@ -22,18 +22,30 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
 
 define('WP_DEFAULT_THEME', 'starter');
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
+// ** MySQL settings - Local config stuff
+// http://markjaquith.wordpress.com/2011/06/24/wordpress-local-dev-tips/
+if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
+  	
+  	include( dirname( __FILE__ ) . '/local-config.php' );
+  	define( 'WP_LOCAL_DEV', true ); // We'll talk about this later
 
-/** MySQL database username */
-define('DB_USER', 'username_here');
+} else {
 
-/** MySQL database password */
-define('DB_PASSWORD', 'password_here');
+	/** MySQL database name */
+	define('DB_NAME', '');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	/** MySQL database username */
+	define('DB_USER', '');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', '');
+
+	/** MySQL hostname */
+	define('DB_HOST', '');
+
+}
+
+
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
