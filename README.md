@@ -8,8 +8,8 @@ Includes Chester (https://github.com/rpullinger/Chester-WordPress-MVC-Theme-Fram
 
 ## To get started
 
-git clone https://github.com/rpullinger/wordpress-starter.git projectname
-git config remote.origin.url git@github.com:rpullinger/projectrepository.git
-git push origin master
-git submodule update --init
+    git clone https://github.com/rpullinger/wordpress-starter.git projectname
+    git config remote.origin.url git@github.com:rpullinger/projectrepository.git
+    git push origin master
+    git submodule update --init
 
